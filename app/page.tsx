@@ -4,7 +4,7 @@ import IMAGE from "next/image";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center">
+    <main className="flex min-h-screen flex-col items-center bg-gradient-to-r from-cyan-500 to-blue-500">
       {/* Head */}
       <div className="flex gap-14 py-6 flex-wrap justify-center">
         <LINK href="/">
