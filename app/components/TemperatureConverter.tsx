@@ -2,7 +2,7 @@
 import { useState } from "react";
 
 export default function TemperatureConverter() {
-  const [celsius, setCelsius] = useState<number>(0);
+  const [celsius, setCelsius] = useState<number>();
   const [fahrenheit, setFahrenheit] = useState<number>();
   const [kelvin, setKelvin] = useState<number>();
 
