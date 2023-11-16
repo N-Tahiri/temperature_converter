@@ -1,30 +1,64 @@
 "use client";
-import React, { useState } from "react";
+import { useEffect, useState } from "react";
 
 export default function Theme() {
-  //   const [isDark];
-  //   const [swap, setSwap] = useState(true);
-
+  // Toggle SVG by swapping them
   const [sun, setSun] = useState("swap-off");
   const [night, setNight] = useState("swap-on");
   function swap() {
     if (sun === "swap-off") {
-      console.log(sun, night);
       setSun("swap-on");
       setNight("swap-off");
-      console.log(sun, night);
-      //   console.log(sun, night);
     } else {
       setSun("swap-off");
       setNight("swap-on");
     }
   }
 
+  // Theme toggle
+  function loadTheme() {
+    if (typeof window !== "undefined" && window.localStorage) {
+      const defaultTheme: string = localStorage.getItem("theme") || "dark";
+      return defaultTheme;
+    } else {
+      return "dark";
+    }
+  }
+
+  // load current theme
+  const [theme, setTheme] = useState(loadTheme);
+
+  // toggle function
+  function toggleTheme() {
+    const newTheme = theme === "dark" ? "light" : "dark";
+    setTheme(newTheme);
+  }
+
+  // store new theme value each time the theme changes
+  useEffect(() => {
+    // fix null type error
+
+    if (typeof window !== "undefined" && window.localStorage) {
+      if (theme) {
+        console.log(theme);
+        localStorage.setItem("theme", theme);
+        const localTheme = localStorage.getItem("theme");
+        document.querySelector("html")?.setAttribute("data-theme", theme);
+      }
+    }
+  }, [theme]);
   return (
     <div>
-      <label className="swap swap-rotate">
+      <label
+        className="swap swap-rotate border-2 border-red-600"
+        // onClick={() => {
+        //   toggleTheme;
+        //   swap;
+        // }}
+        onClick={toggleTheme}
+      >
         {/* this hidden checkbox controls the state */}
-        <input type="checkbox" onChange={swap} />
+        <input type="checkbox" />
 
         {/* sun icon */}
         <svg
