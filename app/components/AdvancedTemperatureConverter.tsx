@@ -57,14 +57,14 @@ export default function AdvancedTemperatureConverter() {
 
   return (
     <>
-      <div className="flex flex-col gap-10 border-4 border-slate-500 p-10">
-        <div className="w-96 justify-between flex">
-          <label className="text-lg font-bold">Celsius °C:</label>
+      <div className="flex flex-col gap-10 border-2 border-primary p-10">
+        <div className="w-96 justify-between flex items-center">
+          <label className="text-lg font-bold text-primary">Celsius °C:</label>
           <input
             id="celsius"
             type="number"
             placeholder="Celsius"
-            className="text-lg text-center"
+            className="text-lg text-center input input-bordered input-primary"
             onChange={handleChange}
             value={celsius}
             pattern="[0-9"
@@ -72,25 +72,27 @@ export default function AdvancedTemperatureConverter() {
         </div>
 
         <div className="bg-red-500 h-1"></div>
-        <div className="w-96 justify-between flex">
-          <label className="text-lg font-bold">Fahrenheit °F:</label>
+        <div className="w-96 justify-between flex items-center">
+          <label className="text-lg font-bold text-primary">
+            Fahrenheit °F:
+          </label>
           <input
             id="fahrenheit"
             type="number"
             placeholder="Fahrenheit"
-            className="text-lg text-center"
+            className="text-lg text-center input input-bordered input-primary"
             onChange={handleChange}
             value={fahrenheit}
           />
         </div>
         <div className="bg-red-500 h-1"></div>
-        <div className="w-96 justify-between flex">
-          <label className="text-lg font-bold">Kelvin °K:</label>
+        <div className="w-96 justify-between flex items-center">
+          <label className="text-lg font-bold text-primary">Kelvin °K:</label>
           <input
             id="kelvin"
             type="number"
             placeholder="Kelvin"
-            className="text-lg text-center"
+            className="text-lg text-center input input-bordered input-primary"
             onChange={handleChange}
             value={kelvin}
           />

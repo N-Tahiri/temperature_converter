@@ -10,7 +10,7 @@ export default function Advanced() {
         <Link href="/">
           <Image src="/logo.png" alt="logo" width={100} height={100} />
         </Link>
-        <p className="text-6xl font-bold  text-slate-600 hover:text-slate-700 border-b-4 border-orange-600">
+        <p className="text-6xl font-bold  text-primary hover:text-accent border-b-4 border-orange-600">
           Temperature Converter
         </p>
       </div>
