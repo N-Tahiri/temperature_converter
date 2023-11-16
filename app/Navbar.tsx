@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
+import Theme from "./components/Theme";
 
 export default function Navbar() {
   return (
@@ -26,6 +27,9 @@ export default function Navbar() {
       >
         Advanced
       </Link>
+
+      {/* Theme */}
+      <Theme />
     </div>
   );
 }
