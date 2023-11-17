@@ -59,7 +59,7 @@ export default function AdvancedTemperatureConverter() {
     <>
       <div className="flex flex-col gap-10 border-2 border-primary p-10">
         <div className="w-96 justify-between flex items-center">
-          <label className="text-lg font-bold text-primary">Celsius °C:</label>
+          <label className="text-lg font-bold text-active">Celsius °C:</label>
           <input
             id="celsius"
             type="number"
@@ -73,7 +73,7 @@ export default function AdvancedTemperatureConverter() {
 
         <div className="bg-red-500 h-1"></div>
         <div className="w-96 justify-between flex items-center">
-          <label className="text-lg font-bold text-primary">
+          <label className="text-lg font-bold text-active">
             Fahrenheit °F:
           </label>
           <input
@@ -87,7 +87,7 @@ export default function AdvancedTemperatureConverter() {
         </div>
         <div className="bg-red-500 h-1"></div>
         <div className="w-96 justify-between flex items-center">
-          <label className="text-lg font-bold text-primary">Kelvin °K:</label>
+          <label className="text-lg font-bold text-active">Kelvin °K:</label>
           <input
             id="kelvin"
             type="number"

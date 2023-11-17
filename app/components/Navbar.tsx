@@ -9,22 +9,13 @@ export default function Navbar() {
         {" "}
         <Image src={"/logo.png"} alt={"logo"} width={80} height={10}></Image>
       </Link>
-      <Link
-        href={"/"}
-        className=" text-slate-400 hover:text-slate-300 hover:text-2xl"
-      >
+      <Link href={"/"} className=" text-active hover:text-2xl">
         Home
       </Link>
-      <Link
-        href={"/standard"}
-        className=" text-slate-400 hover:text-slate-300 hover:text-2xl"
-      >
+      <Link href={"/standard"} className=" text-active  hover:text-2xl">
         Standard
       </Link>
-      <Link
-        href={"/advanced"}
-        className=" text-slate-400 hover:text-slate-300 hover:text-2xl"
-      >
+      <Link href={"/advanced"} className=" text-active hover:text-2xl">
         Advanced
       </Link>
 

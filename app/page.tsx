@@ -20,13 +20,15 @@ export default function Home() {
         </div>
         <div className="divider divider-secondary">Preview</div>
         <div className="grid card bg-base-300 rounded-box place-items-center">
-          <Image
-            src="/advanced.png"
-            alt="advanced"
-            width={600}
-            height={100}
-            className="m-2 border-4 border-primary"
-          />
+          <Link href={"/advanced"}>
+            <Image
+              src="/advanced.png"
+              alt="advanced"
+              width={600}
+              height={100}
+              className="m-2 border-4 border-primary"
+            />
+          </Link>
         </div>
       </div>
     </main>
