@@ -1,19 +1,33 @@
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center">
-      <div className="pt-10 flex flex-col gap-6">
-        <button className="btn btn-outline">
-          <Link href={"/standard"} className="font-bold text-xl">
-            Standard
+    <main className="flex min-h-screen flex-col items-center pt-12">
+      {/* <div className="divider divider-secondary"></div> */}
+      <div className="flex flex-col w-full p-4">
+        <div className="flex flex-row justify-center items-center card bg-base-300 rounded-box gap-6 p-6">
+          <Link href={"/standard"}>
+            <button className="btn btn-outline font-bold text-xl">
+              Standard
+            </button>{" "}
           </Link>
-        </button>
-        <button className="btn btn-outline btn-primary">
-          <Link href={"/advanced"} className="font-bold text-xl">
-            Advanced
+          <Link href={"/advanced"}>
+            <button className="btn btn-outline btn-primary font-bold text-xl">
+              Advanced
+            </button>
           </Link>
-        </button>
+        </div>
+        <div className="divider divider-secondary">Preview</div>
+        <div className="grid card bg-base-300 rounded-box place-items-center">
+          <Image
+            src="/advanced.png"
+            alt="advanced"
+            width={600}
+            height={100}
+            className="p-4 border-4 border-primary"
+          />
+        </div>
       </div>
     </main>
   );
