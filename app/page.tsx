@@ -25,7 +25,7 @@ export default function Home() {
             alt="advanced"
             width={600}
             height={100}
-            className="p-4 border-4 border-primary"
+            className="m-2 border-4 border-primary"
           />
         </div>
       </div>
